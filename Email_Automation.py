@@ -4,10 +4,10 @@ to = input("Enter the mail address of the receiver:- ")
 
 message = input("Enter the message:- ")
 
-def sendEamail(to, message):
+def sendEmail(to, message):
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
-    server.login('ad98da@gmail.com', '+8801575566564')
-    server.mail('ad98da@gmail.com' , to , message)
+    server.login('senderemail', 'password')
+    server.mail('senderemail' , to, message)
     server.close
-sendEamail(to, message)
+sendEmail(to, message)
